@@ -1,0 +1,7 @@
+#Carperta node_modoles
+node_modules
+package-lock.json
+
+
+#Base de datos
+agenciaviajes.dump
