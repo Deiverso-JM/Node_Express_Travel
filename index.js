@@ -3,6 +3,7 @@ import  router  from "./routes/index.js";
 import db from './config/db.js';
 
 
+
 const app = express();
 
 
@@ -28,6 +29,10 @@ app.use((req, res, next )=>{
     console.log(res.locals)
     return next()
 })
+
+//Agregar body parser para leer los datos del formulario
+app.use(express.urlencoded({extended:true}))
+
 
 //Definir Carpeta publica
 app.use(express.static('public'));

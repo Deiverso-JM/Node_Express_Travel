@@ -5,3 +5,4 @@ package-lock.json
 
 #Base de datos
 agenciaviajes.dump
+.env

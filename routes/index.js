@@ -1,5 +1,6 @@
 import  express  from "express";
-import { paginaInicio, paginaNosotros, paginaTestimoniales, paginaViajes } from "../controllers/paginasController.js";
+import { paginaInicio, paginaNosotros, paginaTestimoniales, paginaViajes, paginaDetalleViaje } from "../controllers/paginasController.js";
+import { guararTestmonial } from "../controllers/testimonialController.js";
 
 const router = express.Router();
 
@@ -10,8 +11,11 @@ router.get('/Nosotros', paginaNosotros)
 
 
 router.get('/viajes', paginaViajes)
+router.get('/viajes/:slug', paginaDetalleViaje)
  
  
 router.get('/testimoniales', paginaTestimoniales)
+router.post('/testimoniales', guararTestmonial)
+
 
 export default router;

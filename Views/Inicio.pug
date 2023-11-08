@@ -1,6 +1,32 @@
 extends ./layouts/index
 
+block slider 
+    .slider   
+        h1 Rio de Jainero 
+        em Aventura 
+
 block contenido
     main.container.mt-5
-        .row
-            h1 Inicio 
+        h2.text-center.mb-5 sobre Nosotros
+        .row.mb-5 
+            .col-md-6 
+                p Donec molestie hendrerit tristique. Sed pharetra quis eros sit amet pulvinar. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut dui leo, maximus at massa id, iaculis dapibus tellus. Sed condimentum id ipsum eget sollicitudin. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent non mauris ultricies, pellentesque tellus sed, condimentum lectus.
+                p Sed faucibus ornare lorem sit amet maximus. Etiam pellentesque tincidunt lorem et tincidunt. Duis porta, ante nec pretium dignissim, ante tortor vulputate dui, eu cursus dui dolor nec arcu. Mauris tempus dignissim ipsum, dapibus viverra massa ornare at. 
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="Img Nosotros", class="img-fluid")
+
+        include ./layouts/bloque_viajes
+    
+    .descuento
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% de Descuento
+                        p.titulo Viaje a Canada
+                        p.fecha 20 de Marzo de 2022 - 28 de marzo de 2024
+                        p.precio $2500 USD
+    
+    .container 
+        h2.mt-5.text-center Testimoniales
+            include ./layouts/bloque_testimoniales
